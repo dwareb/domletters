@@ -34,6 +34,4 @@ if __name__ == "__main__":
         #Clear the dict before running again
         letters.clear()
         
-
-    print("Total Dominant Letters: ")
     print(total)
