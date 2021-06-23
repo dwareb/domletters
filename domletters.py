@@ -8,16 +8,18 @@ if __name__ == "__main__":
     #Below method of inputting to EOF by arekolek, https://stackoverflow.com/questions/21235855/how-to-read-user-input-until-eof
     for intext in stdin:
         txt += intext
-    words = txt.split()
-
-    #Remove all the words that aren't just letters.
+    words = txt.lower().split()
+    
+    #Select just the all alphabet words
+    alphawords = []
     for w in words:
-        if not w.isalpha():
-            words.remove(w)
+        if w.isalpha():
+            alphawords.append(w)
+        
     #Counting most letters in each words.
     letters = {}
     total = 0
-    for w in words:
+    for w in alphawords:
         
         #Method of counting frequency found here: https://www.geeksforgeeks.org/python-frequency-of-each-character-in-string/
         for l in w:
@@ -25,11 +27,11 @@ if __name__ == "__main__":
                 letters[l] += 1
             else:
                 letters[l] = 1
-        
+        #Add to the total the value of the most frequent letter.
         total += max(letters.values())
+        #Clear the dict before running again
         letters.clear()
         
 
     print("Total Dominant Letters: ")
     print(total)
-    print("\n")
