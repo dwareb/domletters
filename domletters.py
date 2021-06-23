@@ -14,7 +14,6 @@ if __name__ == "__main__":
     for w in words:
         if not w.isalpha():
             words.remove(w)
-    print(words)
     #Counting most letters in each words.
     letters = {}
     total = 0
@@ -27,7 +26,7 @@ if __name__ == "__main__":
             else:
                 letters[l] = 1
         
-        total += letters.get(sorted(letters.keys())[-1])
+        total += max(letters.values())
         letters.clear()
         
 
