@@ -1,5 +1,5 @@
 # domletters — count dominant letters
-<Your Name> and Bart Massey 2021
+Michael Fulton and Bart Massey 2021
 
 This repository contains a program that counts dominant
 letters in alphabetic words of an ASCII text read from
@@ -38,7 +38,7 @@ named `Makefile` to compile the program.
 
 To run the program once it is built, say
 
-    ./domletters <input.txt
+    python3 domletters <input.txt
 
 where `input.txt` is the input file to be processed.
 
