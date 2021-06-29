@@ -15,7 +15,7 @@ if __name__ == "__main__":
     #Select just the all alphabet words
     alphawords = []
     for w in words:
-        if w.isalpha():
+        if w.isalpha() and w.isascii():
             alphawords.append(w)
         
     #Counting most letters in each words.
